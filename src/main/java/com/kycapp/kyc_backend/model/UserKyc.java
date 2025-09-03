@@ -2,16 +2,26 @@ package com.kycapp.kycbackend.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import jakarta.validation.constraints.*;
 
 @Document(collection = "user_kyc")
 public class UserKyc {
     @Id
     private String id;
 
+    @NotBlank(message = "Name is required")
     private String name;
+
+    @Pattern(regexp = "\\d{12}", message = "Aadhaar must be 12 digits")
     private String aadhaarNumber;
+
+    @Pattern(regexp = "[A-Z]{5}[0-9]{4}[A-Z]{1}", message = "PAN must be valid (e.g. ABCDE1234F)")
     private String panNumber;
+
+    @Pattern(regexp = "\\d{10}", message = "Phone must be 10 digits")
     private String phone;
+
+    @Email(message = "Invalid email format")
     private String email;
 
     // constructor
