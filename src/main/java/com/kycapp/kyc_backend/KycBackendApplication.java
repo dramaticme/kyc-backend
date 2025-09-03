@@ -1,4 +1,4 @@
-package com.kycapp.kyc_backend;
+package com.kycapp.kycbackend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
