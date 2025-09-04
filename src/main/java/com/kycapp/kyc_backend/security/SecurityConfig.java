@@ -20,7 +20,8 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()
             .authorizeHttpRequests()
-            .requestMatchers("/api/auth/**").permitAll()  // signup & login allowed without token
+            .requestMatchers("/api/auth/**").permitAll()  
+            .requestMatchers("/api/uploads/**").permitAll()
             .anyRequest().authenticated()
             .and()
             .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
