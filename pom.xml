@@ -88,7 +88,29 @@
     		<version>5.10.2</version>
     		<scope>test</scope>
 		</dependency>
+		<dependency>
+    		<groupId>net.sourceforge.tess4j</groupId>
+    		<artifactId>tess4j</artifactId>
+    		<version>5.6.0</version> <!-- check latest -->
+		</dependency>
+		<dependency>
+    		<groupId>com.github.jai-imageio</groupId>
+    		<artifactId>jai-imageio-core</artifactId>
+    		<version>1.4.0</version>
+		</dependency>
+		<!-- JAI Image I/O (supports TIFF/BMP/GIF) -->
+		<dependency>
+			<groupId>com.github.jai-imageio</groupId>
+			<artifactId>jai-imageio-core</artifactId>
+			<version>1.4.0</version>
+		</dependency>
 
+		<!-- Apache PDFBox -->
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>2.0.30</version>
+		</dependency>
 		</dependencies>
 
 	<build>
@@ -105,8 +127,7 @@
         		<skipTests>true</skipTests>
     			</configuration>
 			</plugin>
-		</plugins>
-		
+		</plugins>		
 	</build>
 
 </project>
